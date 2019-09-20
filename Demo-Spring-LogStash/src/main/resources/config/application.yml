@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: Logback Sender
+  
+server:
+  port: 9999
