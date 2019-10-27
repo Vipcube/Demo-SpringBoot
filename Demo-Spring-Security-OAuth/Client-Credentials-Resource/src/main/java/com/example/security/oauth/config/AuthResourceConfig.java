@@ -1,4 +1,4 @@
-package com.example.security.oauth.main.config;
+package com.example.security.oauth.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

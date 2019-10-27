@@ -72,5 +72,7 @@
 		<module>Client-Credentials-Resource</module>
 		<module>Password-Credentials-Server</module>
 		<module>Password-Credentials-Resource</module>
+		<module>Password-Credentials-JWT-Resource</module>
+		<module>Password-Credentials-JWT-Server</module>
 	</modules>
 </project>
