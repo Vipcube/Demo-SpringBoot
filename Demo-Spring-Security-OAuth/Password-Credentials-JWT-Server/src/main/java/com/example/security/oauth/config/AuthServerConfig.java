@@ -26,14 +26,6 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 	@Autowired
 	private JwtAccessTokenConverter accessTokenConverter;
 
-	//@Override
-	//public void configure( AuthorizationServerSecurityConfigurer oauthServer ) throws Exception {
-		//oauthServer.checkTokenAccess( "isAuthenticated()" );
-		//oauthServer
-		//		.tokenKeyAccess( "isAnonymous() || hasAuthority('ROLE_TRUSTED_CLIENT')" ) // Expose the URL: /oauth/token_key (used by Resource Servers to decode access tokens)
-		//		.checkTokenAccess("hasAuthority('ROLE_TRUSTED_CLIENT')"); // Expose the URL: /oauth/check_token (exposes public key for token verification if using JWT tokens)
-	//}
-
 	/**
 	 * The OAuth client: id, secret, scope, resources, grant type.
 	 *
