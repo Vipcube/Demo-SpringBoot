@@ -8,6 +8,6 @@ security:
       clientSecret: webclient12345678
 
     resource:
-      token-info-uri: http://localhost:8080/oauth/check_token
+      token-info-uri: /oauth/check_token
 
 logging.level.org.springframework.security: DEBUG
