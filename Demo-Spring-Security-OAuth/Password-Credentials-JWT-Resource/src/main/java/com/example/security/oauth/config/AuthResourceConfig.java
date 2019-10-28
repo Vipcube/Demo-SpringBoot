@@ -20,7 +20,8 @@ public class AuthResourceConfig extends ResourceServerConfigurerAdapter {
 	@Override
 	public void configure( ResourceServerSecurityConfigurer resources) {
 		resources.tokenServices( tokenServices() )
-				.resourceId( "resource" );
+				.resourceId( "resource" )
+				.stateless( true );
 	}
 
 	@Override
