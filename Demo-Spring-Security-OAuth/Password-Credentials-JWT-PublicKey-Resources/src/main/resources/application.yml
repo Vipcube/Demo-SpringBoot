@@ -1,0 +1,15 @@
+server:
+  port : 8081
+
+security:
+  oauth2:
+    client:
+      clientId: webclient
+      clientSecret: webclient12345678
+
+    resource:
+      tokenInfoUri: /oauth/check_token
+      jwt:
+        keyUri: http://localhost:8080/oauth/token_key
+
+logging.level.org.springframework.security: DEBUG
