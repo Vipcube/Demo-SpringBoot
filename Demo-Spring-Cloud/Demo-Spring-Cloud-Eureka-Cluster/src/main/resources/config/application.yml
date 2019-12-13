@@ -1,0 +1,43 @@
+eureka:
+  instance:
+    prefer-ip-address: true
+
+---
+spring:
+  application:
+    name: spring-cloud-eureka
+  profiles: peer1
+
+server:
+  port: 8000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/,http://127.0.0.1:8002/eureka/
+---
+spring:
+  application:
+    name: spring-cloud-eureka
+  profiles: peer2
+
+server:
+  port: 8001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/,http://127.0.0.1:8002/eureka/
+---
+spring:
+  application:
+    name: spring-cloud-eureka
+  profiles: peer3
+
+server:
+  port: 8002
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/,http://127.0.0.1:8001/eureka/
