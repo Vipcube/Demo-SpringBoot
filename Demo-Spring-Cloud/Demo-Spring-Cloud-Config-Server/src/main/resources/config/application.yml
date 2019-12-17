@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Vipcube/Demo-SpringBoot
+          search-paths: Demo-Spring-Cloud/Demo-Config-Repositories/Test-Config
+          username:
+          password:
+          #default-label: devlop
+
+server:
+  port: 8001
