@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: demo-config
+      profile: dev
+      uri: http://localhost:8001/
+      label: devlop

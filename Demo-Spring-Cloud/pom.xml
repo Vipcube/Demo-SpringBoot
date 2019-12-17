@@ -69,5 +69,6 @@
 		<module>Demo-Spring-Cloud-Eureka-Simple-Producer2</module>
 		<module>Demo-Spring-Cloud-Eureka-Consumer-Hystrix-Dashboard</module>
 		<module>Demo-Spring-Cloud-Config-Server</module>
+		<module>Demo-Spring-Cloud-Config-Client</module>
 	</modules>
 </project>

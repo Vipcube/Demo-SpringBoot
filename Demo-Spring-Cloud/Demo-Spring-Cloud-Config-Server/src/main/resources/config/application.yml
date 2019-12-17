@@ -9,7 +9,7 @@ spring:
           search-paths: Demo-Spring-Cloud/Demo-Config-Repositories/Test-Config
           username:
           password:
-      label: devlop
+          #default-label: devlop
 
 server:
   port: 8001
