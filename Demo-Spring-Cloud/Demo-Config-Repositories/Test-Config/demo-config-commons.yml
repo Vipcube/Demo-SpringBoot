@@ -1,4 +1,5 @@
 demo:
   commoms:
     text1: Commons text 1
-    text2: Commons text 1
+    text2: Commons text 2
+    url: http://localhost/other

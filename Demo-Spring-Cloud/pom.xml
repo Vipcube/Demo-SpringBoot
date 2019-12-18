@@ -71,5 +71,6 @@
 		<module>Demo-Spring-Cloud-Config-Server</module>
 		<module>Demo-Spring-Cloud-Config-Client</module>
 		<module>Demo-Spring-Cloud-Conifg-Server-Eureka</module>
+		<module>Demo-Spring-Cloud-Config-Client-Eureka</module>
 	</modules>
 </project>
