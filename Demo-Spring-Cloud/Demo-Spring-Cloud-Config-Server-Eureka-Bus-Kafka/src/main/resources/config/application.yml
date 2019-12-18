@@ -12,6 +12,9 @@ spring:
           username:
           password:
           default-label: devlop
+    bus:
+      trace:
+        enabled: true
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
