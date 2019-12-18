@@ -14,7 +14,7 @@ spring:
           default-label: devlop
     bus:
       trace:
-        enabled: true
+        enabled: true # Can be trace with URL: /trace after /bus/refresh
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
