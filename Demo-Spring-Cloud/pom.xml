@@ -70,5 +70,6 @@
 		<module>Demo-Spring-Cloud-Eureka-Consumer-Hystrix-Dashboard</module>
 		<module>Demo-Spring-Cloud-Config-Server</module>
 		<module>Demo-Spring-Cloud-Config-Client</module>
+		<module>Demo-Spring-Cloud-Conifg-Server-Eureka</module>
 	</modules>
 </project>
