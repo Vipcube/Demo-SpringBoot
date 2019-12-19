@@ -16,9 +16,10 @@ spring:
         #- id: ui_zk_route
         #  uri: http://localhost:2000
         #  predicates:
-        #    - Path=/ui/demo
+        #    - Path=/ui/demo/**
         #  filters:
         #    - StripPrefix=2
+        #    - RewritePath=/zkau/(?<segment>.*), /ui/demo/zkau/$\{segment}
 
 server:
   port: 8080
