@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false # If true, create mapping url from the eureka server service-id
+          lower-case-service-id: false #  If true, mapping url be lower case
+      routes:
+        - id: producer_route
+          uri: http://localhost:9000
+          predicates:
+            - Path=/hello
+
+server:
+  port: 8080
+
+# See the log level
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+
+# If want see gateway status
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: gateway
