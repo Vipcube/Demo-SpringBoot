@@ -12,6 +12,13 @@ spring:
           uri: http://localhost:9000
           predicates:
             - Path=/hello
+        # Can't load the zkau resources.
+        #- id: ui_zk_route
+        #  uri: http://localhost:2000
+        #  predicates:
+        #    - Path=/ui/demo
+        #  filters:
+        #    - StripPrefix=2
 
 server:
   port: 8080
