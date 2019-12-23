@@ -15,10 +15,11 @@ spring:
     bus:
       trace:
         enabled: true # Can be trace with URL: /trace after /bus/refresh
-  kafka:
-    bootstrap-servers: localhost:9092
-    consumer:
-      group-id: Spring-Cloud-Bus
+
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
 
 eureka:
   instance:
