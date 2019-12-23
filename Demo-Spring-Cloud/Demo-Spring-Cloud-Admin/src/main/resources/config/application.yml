@@ -1,9 +1,9 @@
 spring:
   application:
-    name: spring-cloud-producer
+    name: spring-admin-server
 
 server:
-  port: 9003
+  port: 7000
 
 eureka:
   instance:
@@ -13,10 +13,8 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8000/eureka/
 
-# For spring admin
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
-        exclude: configprops # to avoid the database will keep connection
+        include: '*'
