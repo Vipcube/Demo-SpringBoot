@@ -74,6 +74,7 @@
 		<module>Demo-Spring-Cloud-Config-Client-Eureka</module>
 		<module>Demo-Spring-Cloud-Config-Client-Eureka-Bus-Kafka</module>
 		<module>Demo-Spring-Cloud-Gateway</module>
+		<module>Demo-Spring-Cloud-Gateway-Eureka</module>
 		<module>Demo-Spring-Cloud-UI-ZK</module>
 	</modules>
 </project>

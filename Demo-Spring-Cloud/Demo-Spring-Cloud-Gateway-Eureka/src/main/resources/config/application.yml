@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # If true, create mapping url from the eureka server service-id
+          lower-case-service-id: true #  If true, mapping url be lower case
+      routes:
+        - id: add_request_parameter_route
+          uri: lb://spring-cloud-producer # The eureka service format 'lb://server_id'
+          filters:
+            - AddRequestParameter=foo, bar # RequestParam key foo = value bar
+          predicates:
+            - Method=GET
+
+server:
+  port: 8080
+
+# See the log level
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+
+# If want see gateway status
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: gateway
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/

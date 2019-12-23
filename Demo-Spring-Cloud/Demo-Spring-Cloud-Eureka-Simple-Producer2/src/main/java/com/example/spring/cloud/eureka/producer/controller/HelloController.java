@@ -16,4 +16,9 @@ public class HelloController {
 	public String index( @RequestParam String name ) {
 		return "hello "+name+"，this is producer 2 message.";
 	}
+
+	@RequestMapping( "/foo" )
+	public String foo( String foo ) {
+		return "Producer 02 Foo " + foo + "!!";
+	}
 }
