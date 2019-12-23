@@ -16,6 +16,13 @@ spring:
       trace:
         enabled: true # Can be trace with URL: /trace after /bus/refresh
 
+  # Global setting for kafka, chose one is ok
+  #kafka:
+  #  bootstrap-servers: localhost:9092
+  #  consumer:
+  #    group-id: Spring-Cloud-Bus
+
+  # Stream kafka setting
     stream:
       kafka:
         binder:
