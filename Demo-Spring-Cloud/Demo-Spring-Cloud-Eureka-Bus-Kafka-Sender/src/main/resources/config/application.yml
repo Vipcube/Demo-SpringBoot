@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: spring-cloud-bus-sender
+  cloud:
+    bus:
+      trace:
+        enabled: true
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        greetings-out:
+          destination: greetings
+          contentType: application/json
+
+server:
+  port: 9500
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+
+# Can be admin, and the bus url
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,heapdump,info,threaddump,bus-refresh,bus-env
