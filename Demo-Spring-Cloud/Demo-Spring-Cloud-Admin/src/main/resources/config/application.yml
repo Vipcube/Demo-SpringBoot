@@ -17,4 +17,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,heapdump,info,threaddump
+        include: health,heapdump,info,threaddump,metrics,logfile
