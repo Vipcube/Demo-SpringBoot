@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-zk
+  profiles:
+    active: server1
+
+server:
+  port: 2000
+
+zk:
+  springboot-packaging: jar

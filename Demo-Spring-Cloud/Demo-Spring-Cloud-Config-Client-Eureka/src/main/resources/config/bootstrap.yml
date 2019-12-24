@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      name: demo-config
+      profile: dev
+      uri: http://localhost:8001/
+      label: devlop
+      discovery:
+        enabled: true
+        service-id: spring-cloud-config-server
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/

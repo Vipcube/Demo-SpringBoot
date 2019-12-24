@@ -1,2 +1,6 @@
+spring:
+  profiles:
+    include: commons
+
 demo:
-  hello: hello im dev
+  hello: hello modify kafka AGAIN tesd dev

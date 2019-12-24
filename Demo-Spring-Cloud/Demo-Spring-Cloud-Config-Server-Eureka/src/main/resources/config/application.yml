@@ -1,0 +1,36 @@
+spring:
+  profiles:
+    active: server1
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Vipcube/Demo-SpringBoot
+          search-paths: Demo-Spring-Cloud/Demo-Config-Repositories/Test-Config
+          username:
+          password:
+          default-label: devlop
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+
+---
+spring:
+  profiles: server1
+
+server:
+  port: 8001
+
+---
+spring:
+  profiles: server2
+
+server:
+  port: 8003

@@ -57,6 +57,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
@@ -67,8 +74,17 @@
 		<module>Demo-Spring-Cloud-Eureka-Simple-Producer</module>
 		<module>Demo-Spring-Cloud-Eureka-Simple-Consumer</module>
 		<module>Demo-Spring-Cloud-Eureka-Simple-Producer2</module>
-		<module>Demo-Spring-Cloud-Eureka-Consumer-Hystrix-Dashboard</module>
+		<module>Demo-Spring-Cloud-Eureka-Bus-Kafka-Listener</module>
+		<module>Demo-Spring-Cloud-Eureka-Bus-Kafka-Sender</module>
 		<module>Demo-Spring-Cloud-Config-Server</module>
+		<module>Demo-Spring-Cloud-Config-Server-Eureka</module>
+		<module>Demo-Spring-Cloud-Config-Server-Eureka-Bus-Kafka</module>
 		<module>Demo-Spring-Cloud-Config-Client</module>
+		<module>Demo-Spring-Cloud-Config-Client-Eureka</module>
+		<module>Demo-Spring-Cloud-Config-Client-Eureka-Bus-Kafka</module>
+		<module>Demo-Spring-Cloud-Gateway</module>
+		<module>Demo-Spring-Cloud-Gateway-Eureka</module>
+		<module>Demo-Spring-Cloud-UI-ZK</module>
+		<module>Demo-Spring-Cloud-Admin</module>
 	</modules>
 </project>

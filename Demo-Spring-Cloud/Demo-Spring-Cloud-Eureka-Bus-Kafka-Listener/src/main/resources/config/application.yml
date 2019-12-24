@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: spring-cloud-bus-listener
+  cloud:
+    bus:
+      refresh:
+        enabled: true # Can be refresh by bus
+    stream: # Message brokers find from the bus, no need setting brokers
+      bindings:
+        greetings-in:
+          destination: greetings
+          contentType: application/json
+
+server:
+  port: 9501
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/

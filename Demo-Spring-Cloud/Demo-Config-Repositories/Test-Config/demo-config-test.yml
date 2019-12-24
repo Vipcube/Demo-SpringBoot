@@ -1,2 +1,6 @@
+spring:
+  profiles:
+    include: commons
+
 demo:
   hello: hello im test

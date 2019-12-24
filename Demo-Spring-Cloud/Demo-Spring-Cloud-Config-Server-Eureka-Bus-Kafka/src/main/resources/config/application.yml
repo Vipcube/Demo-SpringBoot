@@ -1,0 +1,57 @@
+spring:
+  profiles:
+    active: server1
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Vipcube/Demo-SpringBoot
+          search-paths: Demo-Spring-Cloud/Demo-Config-Repositories/Test-Config
+          username:
+          password:
+          default-label: devlop
+    bus:
+      trace:
+        enabled: true # Can be trace with URL: /trace after /bus/refresh
+
+  # Global setting for kafka, chose one is ok
+  #kafka:
+  #  bootstrap-servers: localhost:9092
+  #  consumer:
+  #    group-id: Spring-Cloud-Bus
+
+  # Stream kafka setting
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+
+# Can be admin, and the bus url
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,heapdump,info,threaddump,bus-refresh,bus-env
+---
+spring:
+  profiles: server1
+
+server:
+  port: 8001
+
+---
+spring:
+  profiles: server2
+
+server:
+  port: 8003
