@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-scheduletasks
+
+server:
+  port: 8000
+
+#demo:
+#  scheduled:
+#    task: '0 */2 * * * *'
