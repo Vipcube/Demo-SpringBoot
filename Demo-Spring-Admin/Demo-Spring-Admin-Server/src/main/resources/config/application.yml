@@ -1,0 +1,11 @@
+server:
+                  port: 8000
+
+                  spring:
+                    application:
+                      name: admin-server
+
+                    security:
+                      user:
+                        name: adminserver
+                        password: password
