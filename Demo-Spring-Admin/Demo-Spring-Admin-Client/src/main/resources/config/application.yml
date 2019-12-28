@@ -1,0 +1,30 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: admin-client
+
+  security:
+    user:
+      name: adminclient
+      password: password
+
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:8000
+        # 配置連接到監測管理平台的Security安全密碼
+        username: adminserver
+        password: password
+        instance:
+          metadata:
+            # 配置發送到SBA Server的SBA Client的端點安全密碼
+            user.name: ${spring.security.user.name}
+            user.password: ${spring.security.user.password}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
