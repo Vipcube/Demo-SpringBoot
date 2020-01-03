@@ -1,15 +1,14 @@
-package com.example.security.oauth.main;
+package com.example.security.oauth;
 
-import com.example.security.oauth.config.AuthServerConfig;
-import com.example.security.oauth.config.WebSecurityConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Import;
 
-@Import( {
-		AuthServerConfig.class,
-		WebSecurityConfig.class
-} )
+/**
+ * The main program.
+ *
+ * @author Brad Chen
+ *
+ */
 @SpringBootApplication
 public class PasswordCredentialsServerApp {
 	public static void main( String[] args ) {
