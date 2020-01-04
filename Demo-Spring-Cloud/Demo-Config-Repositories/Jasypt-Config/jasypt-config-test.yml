@@ -1,0 +1,6 @@
+demo:
+  jasypt: ENC(9Aai/Gmo3JLxt9izcTvIldn/QgwFGHN3L1cBOeTYL/1riV8oot9joLjqXo8S6plQ)
+
+jasypt:
+  encryptor:
+    password: securt
