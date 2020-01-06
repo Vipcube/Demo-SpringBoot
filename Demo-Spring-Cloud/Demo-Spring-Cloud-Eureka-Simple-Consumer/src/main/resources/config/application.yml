@@ -2,6 +2,11 @@ spring:
   application:
     name: spring-cloud-consumer
 
+  cloud:
+    loadbalancer:
+      ribbon:
+        enable: false # Enable the ribbon, so will use the spring cloud loadbalancer default
+
 server:
   port: 9001
 
