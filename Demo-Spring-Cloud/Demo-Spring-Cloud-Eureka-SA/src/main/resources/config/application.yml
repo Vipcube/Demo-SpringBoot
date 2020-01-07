@@ -6,9 +6,6 @@ server:
   port: 8000
 
 eureka:
-  instance:
-    prefer-ip-address: true
-
   client:
     fetch-registry: false
     register-with-eureka: false
