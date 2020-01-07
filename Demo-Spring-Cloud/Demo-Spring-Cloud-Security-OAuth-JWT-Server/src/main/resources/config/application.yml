@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-cloud-oauth-server
+
+server:
+  port: 10000
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+
+# For spring admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,heapdump,info,threaddump,metrics,logfile
+
+
+logging.level.org.springframework.security: DEBUG

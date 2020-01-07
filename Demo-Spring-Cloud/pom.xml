@@ -88,5 +88,7 @@
 		<module>Demo-Spring-Cloud-Gateway-Eureka</module>
 		<module>Demo-Spring-Cloud-UI-ZK</module>
 		<module>Demo-Spring-Cloud-Admin</module>
+		<module>Demo-Spring-Cloud-Security-OAuth-JWT-Server</module>
+		<module>Demo-Spring-Cloud-Security-OAuth-JWT-Resource</module>
 	</modules>
 </project>
