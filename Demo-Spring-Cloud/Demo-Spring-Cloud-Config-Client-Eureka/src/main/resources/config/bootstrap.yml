@@ -8,10 +8,12 @@ spring:
         enabled: true
         service-id: spring-cloud-config-server
 
+# The setting put on the commons-config
 eureka:
-  instance:
-    prefer-ip-address: true
+  #instance:
+  #  prefer-ip-address: true
 
   client:
     service-url:
       defaultZone: http://127.0.0.1:8000/eureka/
+      # The setting must have, because need discovery base on service-id from the eureka
