@@ -9,6 +9,7 @@ spring:
         git:
           uri: https://github.com/Vipcube/Demo-SpringBoot
           search-paths:
+            - Demo-Spring-Cloud/Demo-Config-Repositories/Commons-Config
             - Demo-Spring-Cloud/Demo-Config-Repositories/Test-Config
             - Demo-Spring-Cloud/Demo-Config-Repositories/Jasypt-Config
           username:
