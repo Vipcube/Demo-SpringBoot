@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: spring-cloud-oauth-resource
+
+server:
+  port: 10001
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8000/eureka/
+
+security:
+  oauth2:
+    # It's use to decode base on oauth server.
+    #client:
+    #  client-id: webclient1
+    #  client-secret: webclient12345678
+    resource:
+      jwt:
+        key-value: FEWS_KEY
+
+# For spring admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,heapdump,info,threaddump,metrics,logfile
+
+
+logging.level.org.springframework.security: DEBUG

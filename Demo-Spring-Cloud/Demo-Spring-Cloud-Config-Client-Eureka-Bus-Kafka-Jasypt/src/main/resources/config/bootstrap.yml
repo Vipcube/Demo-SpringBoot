@@ -3,7 +3,6 @@ spring:
     config:
       name: jasypt-config
       profile: dev
-      uri: http://localhost:8001/
       label: devlop
       discovery:
         enabled: true

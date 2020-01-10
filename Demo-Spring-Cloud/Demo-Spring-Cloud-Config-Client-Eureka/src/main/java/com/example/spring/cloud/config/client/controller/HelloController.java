@@ -11,8 +11,11 @@ public class HelloController {
 	@Value("${demo.hello}")
 	private String hello;
 
+	@Value("${commons.attribute.first}")
+	private String commons;
+
 	@RequestMapping("/hello")
 	public String from() {
-		return this.hello;
+		return this.hello + " " + this.commons;
 	}
 }
