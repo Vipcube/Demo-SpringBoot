@@ -76,5 +76,6 @@
 		<module>Password-Credentials-JWT-Server</module>
 		<module>Password-Credentials-JWT-PublicKey-Server</module>
 		<module>Password-Credentials-JWT-PublicKey-Resources</module>
+		<module>Authorization-Code-Server</module>
 	</modules>
 </project>
