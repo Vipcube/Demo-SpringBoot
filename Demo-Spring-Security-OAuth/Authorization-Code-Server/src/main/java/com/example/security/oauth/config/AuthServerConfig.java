@@ -8,6 +8,7 @@ import org.springframework.security.oauth2.config.annotation.configurers.ClientD
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
 /**
  * The auth server config.
@@ -31,6 +32,11 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 		endpoints.authenticationManager( authenticationManager );
 	}
 
+	@Override
+	public void configure( AuthorizationServerSecurityConfigurer security ) {
+		security.checkTokenAccess( "isAuthenticated()" );
+	}
+
 	/**
 	 * The OAuth client: id, secret, scope, resources, grant type.
 	 *
@@ -43,9 +49,9 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 				.withClient( "webclient" )
 				.secret( this.passwordEncoder.encode( "webclient12345678" ) )
 				.accessTokenValiditySeconds( 3600 )
-				.redirectUris( "https://www.google.com.tw" )
+				.redirectUris( "http://localhost:8081/login" )
 				.scopes( "account", "message", "email" )
 				.resourceIds( "resource" )
-				.authorizedGrantTypes( "authorization_code", "refresh_token" );
+				.authorizedGrantTypes( "authorization_code", "refresh_token", "password" );
 	}
 }
