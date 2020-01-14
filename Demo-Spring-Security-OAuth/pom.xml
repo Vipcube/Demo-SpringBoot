@@ -71,6 +71,7 @@
 		<module>Client-Credentials-Server</module>
 		<module>Client-Credentials-Resource</module>
 		<module>Password-Credentials-Server</module>
+		<module>Password-Credentials-Server-Database</module>
 		<module>Password-Credentials-Resource</module>
 		<module>Password-Credentials-JWT-Resource</module>
 		<module>Password-Credentials-JWT-Server</module>
@@ -78,5 +79,5 @@
 		<module>Password-Credentials-JWT-PublicKey-Resources</module>
 		<module>Authorization-Code-Server</module>
         <module>Authorization-Code-Resource</module>
-    </modules>
+	</modules>
 </project>
