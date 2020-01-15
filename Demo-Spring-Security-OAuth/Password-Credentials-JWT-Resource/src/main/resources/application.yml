@@ -8,6 +8,7 @@ security:
       clientSecret: webclient12345678
 
     resource:
-      token-info-uri: /oauth/check_token
+      jwt:
+        key-value: FEWS_KEY
 
 logging.level.org.springframework.security: DEBUG
