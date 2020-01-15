@@ -1,1 +1,10 @@
 logging.level.org.springframework.security: DEBUG
+
+security:
+  oauth2:
+    authorization:
+      jwt:
+        key-store: classpath:mytest.jks
+        key-store-password: mypass
+        key-password: mypass
+        key-alias: mytest

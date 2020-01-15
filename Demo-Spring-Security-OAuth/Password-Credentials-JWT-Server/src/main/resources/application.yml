@@ -1,1 +1,6 @@
 logging.level.org.springframework.security: DEBUG
+security:
+  oauth2:
+    authorization:
+      jwt:
+        key-value: FEWS_KEY
