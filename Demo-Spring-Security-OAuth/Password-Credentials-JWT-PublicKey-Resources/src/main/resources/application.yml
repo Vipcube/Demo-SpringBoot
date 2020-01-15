@@ -8,8 +8,18 @@ security:
       clientSecret: webclient12345678
 
     resource:
-      tokenInfoUri: /oauth/check_token
+      #tokenInfoUri: /oauth/check_token
       jwt:
-        keyUri: http://localhost:8080/oauth/token_key
+        #key-uri: http://localhost:8080/oauth/token_key
+        key-value: |
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl0uYJCE57Cv+kCbh8bMC
+          4ICu63I9OxlWhGSW6vJCRaE2QOPPIkz/9PS0piVLjxRcKE1E39pnRvHuoAoMWQK3
+          IP0TNzZZHIwVEJMJcognrY7i99fIK6norofHtTha7tQZgCH19MpsrrL+zfKPXKn3
+          hM2fVLmUo0yyDo6QUiYM6K793hn0W/gDgRiouBr29ApTJZlU4V9USolHQRGI3bFO
+          /EQWgMPhCCY10EXbN4mLUm5jW7z98s173BPaiZLYIfFJ92Qvgr/56CEXNB7k0wT1
+          mzlRtTqkGUo+7eXtVr0LScLA4KiggMyL33hOPJ1fGmRMAZP0OadwQJeR+yUdDO4O
+          CQIDAQAB
+          -----END PUBLIC KEY-----
 
 logging.level.org.springframework.security: DEBUG
