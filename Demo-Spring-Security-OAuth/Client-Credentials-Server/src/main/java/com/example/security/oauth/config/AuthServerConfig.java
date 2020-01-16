@@ -17,8 +17,6 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 @Configuration
 @EnableAuthorizationServer
 public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
-	private static final String DEMO_RESOURCE_ID = "order";
-
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 
