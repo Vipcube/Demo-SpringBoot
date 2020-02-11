@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-cloud-client
+
+server:
+  port: 9000
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    security:
+      basic:
+        user: user
+        password: password
+    service-url:
+      defaultZone: http://${eureka.client.security.basic.user}:${eureka.client.security.basic.password}@127.0.0.1:8000/eureka/

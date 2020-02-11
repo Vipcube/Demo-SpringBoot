@@ -71,6 +71,8 @@
 	<modules>
 		<module>Demo-Spring-Cloud-Eureka-Cluster</module>
 		<module>Demo-Spring-Cloud-Eureka-SA</module>
+		<module>Demo-Spring-Cloud-Eureka-SA-Security</module>
+		<module>Demo-Spring-Cloud-Eureka-Client-Security</module>
 		<module>Demo-Spring-Cloud-Eureka-Simple-Producer</module>
 		<module>Demo-Spring-Cloud-Eureka-Simple-Producer2</module>
 		<module>Demo-Spring-Cloud-Eureka-Simple-Consumer</module>
