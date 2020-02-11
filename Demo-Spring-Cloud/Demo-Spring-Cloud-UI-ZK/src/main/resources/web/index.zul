@@ -1,9 +1,0 @@
-<zk>
-	<window title="Hello ZK - Spring Boot!" border="normal"
-			viewModel="@id('vm') @init('com.example.spring.cloud.ui.zk.vm.ViewModel')">
-		You are using ZK version <label value="${session.webApp.version}"/>
-		DEMO!!!!!!!!!!!!!!!!!!
-		<hlayout>count: <label value="@load(vm.count)" /></hlayout>
-		<button label="add" onClick="@command('cmd')"/>
-	</window>
-</zk>
