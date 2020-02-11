@@ -72,9 +72,10 @@
 		<module>Demo-Spring-Cloud-Eureka-Cluster</module>
 		<module>Demo-Spring-Cloud-Eureka-SA</module>
 		<module>Demo-Spring-Cloud-Eureka-Simple-Producer</module>
-		<module>Demo-Spring-Cloud-Eureka-Simple-Consumer</module>
 		<module>Demo-Spring-Cloud-Eureka-Simple-Producer2</module>
+		<module>Demo-Spring-Cloud-Eureka-Simple-Consumer</module>
 		<module>Demo-Spring-Cloud-Eureka-CircuitBreaker-Consumer</module>
+		<module>Demo-Spring-Cloud-Eureka-OAuth-Consumer</module>
 		<module>Demo-Spring-Cloud-Eureka-Bus-Kafka-Listener</module>
 		<module>Demo-Spring-Cloud-Eureka-Bus-Kafka-Sender</module>
 		<module>Demo-Spring-Cloud-Config-Server</module>
