@@ -20,8 +20,6 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 @Configuration
 @EnableAuthorizationServer
 public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
-	private static final String DEMO_RESOURCE_ID = "order";
-
 	@Autowired
 	private AuthenticationManager authenticationManager;
 
