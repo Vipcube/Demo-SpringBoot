@@ -6,10 +6,6 @@ import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
-import io.swagger.v3.oas.annotations.security.OAuthFlow;
-import io.swagger.v3.oas.annotations.security.OAuthFlows;
-import io.swagger.v3.oas.annotations.security.OAuthScope;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import org.springframework.stereotype.Component;
 
@@ -34,7 +30,6 @@ import org.springframework.stereotype.Component;
 //		type = SecuritySchemeType.OAUTH2,
 //		description = "The OAuth JWT token",
 //		in = SecuritySchemeIn.HEADER,
-//		bearerFormat = "JWT",
 //		flows = @OAuthFlows(
 //			password = @OAuthFlow(
 //					tokenUrl = "http://localhost:8080/oauth/token",

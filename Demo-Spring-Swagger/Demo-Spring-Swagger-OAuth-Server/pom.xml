@@ -12,6 +12,8 @@
 	<artifactId>demo-spring-swagger-oauth-server</artifactId>
 	<packaging>jar</packaging>
 
+	<name>The Demo of OAuth Server user for swagger test</name>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

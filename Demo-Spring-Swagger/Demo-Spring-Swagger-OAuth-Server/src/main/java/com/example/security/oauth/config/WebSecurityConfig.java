@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -26,9 +27,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure( HttpSecurity http) throws Exception {
-		http.csrf().disable()
+		http.cors().and()
+				.csrf().disable()
 				.authorizeRequests()
-				.anyRequest().authenticated();
+				.anyRequest().authenticated()
+				.and()
+				.httpBasic().and()
+				.sessionManagement()
+				.sessionCreationPolicy( SessionCreationPolicy.STATELESS );
 	}
 
 	/**
@@ -56,4 +62,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	public BCryptPasswordEncoder passwordEncoder(){
 		return new BCryptPasswordEncoder();
 	}
+
+	//@Bean("corsConfigurationSource")
+	//public CorsConfigurationSource corsConfigurationSource() {
+	//	CorsConfiguration configuration = new CorsConfiguration();
+	//	configuration.setAllowedOrigins( Arrays.asList("*") );
+	//	configuration.setAllowCredentials( true );
+	//	configuration.setAllowedMethods( Arrays.asList( "GET", "POST", "OPTIONS" ) );
+	//	configuration.setAllowedHeaders( Arrays.asList( "Authorization", "Cache-Control", "Content-Type", "Referer", "X-Requested-With" ) );
+	//	UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+	//	source.registerCorsConfiguration("/**", configuration );
+	//	return source;
+	//}
 }
