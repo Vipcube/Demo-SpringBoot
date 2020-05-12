@@ -1,14 +1,17 @@
 spring:
+  profiles:
+    active: listener2
+
   cloud:
     stream:
       kafka:
         binder:
           brokers: localhost:9092
+
       bindings:
         greetings-in:
           destination: greetings
           contentType: application/json
-          
 ---
 spring:
   application:
