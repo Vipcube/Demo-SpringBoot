@@ -47,7 +47,7 @@ public class AuthServerConfig extends AuthorizationServerConfigurerAdapter {
 				.withClient( "webclient" )
 				.secret( this.passwordEncoder.encode( "webclient12345678" ) )
 				.accessTokenValiditySeconds( 3600 )
-				.redirectUris( "http://localhost:8081/login" )
+				.redirectUris( "http://localhost:8081/callback" )
 				.scopes( "account", "message", "email" )
 				.resourceIds( "resource" )
 				.authorizedGrantTypes( "authorization_code", "refresh_token", "password" );
