@@ -78,5 +78,6 @@
 	<modules>
 		<module>Demo-Spring-Cloud-Stream-TopicSender</module>
 		<module>Demo-Spring-Cloud-Stream-TopicListener</module>
+		<module>Demo-Spring-Cloud-Stream-Aggregator</module>
 	</modules>
 </project>
