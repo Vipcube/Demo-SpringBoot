@@ -1,6 +1,6 @@
 spring:
   application:
-    name: Topic Sender
+    name: Topic Aggregator
 
   cloud:
     stream:
@@ -9,9 +9,9 @@ spring:
           brokers: localhost:9092
 
       bindings:
-        output:
+        greetings-in:
           destination: greetings
           contentType: application/json
-          
+
 server:
   port: 8003

@@ -1,26 +1,30 @@
 package com.example.spring.cloud.service;
 
+import com.example.spring.cloud.bean.Greetings;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.MimeTypeUtils;
 
-import com.example.spring.cloud.bean.Greetings;
-import com.example.spring.cloud.stream.IGreetingsStreams;
-
-import lombok.extern.slf4j.Slf4j;
-
 @Slf4j
 @Service
+@EnableBinding( Source.class )
 public class GreetingsService {
+	private final Source source;
+
 	@Autowired
-	private IGreetingsStreams greetingsStreams;
+	public GreetingsService( Source source ){
+		this.source = source;
+	}
 	
 	public void sendGreeting( Greetings greetings ) {
 		log.info("Sending greetings {}", greetings );
-		MessageChannel messageChannel = greetingsStreams.outputs();
+		MessageChannel messageChannel = source.output();
 		messageChannel.send( 
 				MessageBuilder
 					.withPayload( greetings )
