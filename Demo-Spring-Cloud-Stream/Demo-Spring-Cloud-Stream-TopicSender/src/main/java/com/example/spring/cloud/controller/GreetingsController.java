@@ -10,8 +10,12 @@ import com.example.spring.cloud.service.GreetingsService;
 
 @RestController
 public class GreetingsController {
+	private final GreetingsService greetingsService;
+
 	@Autowired
-	private GreetingsService greetingsService;
+	public GreetingsController( GreetingsService greetingsService ){
+		this.greetingsService = greetingsService;
+	}
 	
 	@GetMapping("/greetings")
 	public void greetings( @RequestParam("message") String message) {

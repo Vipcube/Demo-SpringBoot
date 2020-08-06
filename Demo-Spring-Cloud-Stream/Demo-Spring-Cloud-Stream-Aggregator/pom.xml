@@ -11,4 +11,11 @@
 
 	<artifactId>demo-spring-cloud-stream-aggregator</artifactId>
 	<name>Demo-Spring-Cloud-Stream-Aggregator</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream-binder-kafka-streams</artifactId>
+		</dependency>
+	</dependencies>
 </project>

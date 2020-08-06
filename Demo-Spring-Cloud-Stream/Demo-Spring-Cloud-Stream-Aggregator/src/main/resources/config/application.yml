@@ -12,9 +12,6 @@ spring:
         greetings-in:
           destination: greetings
           contentType: application/json
-        greetings-out:
-          destination: greetings
-          contentType: application/json
 
 server:
   port: 8003

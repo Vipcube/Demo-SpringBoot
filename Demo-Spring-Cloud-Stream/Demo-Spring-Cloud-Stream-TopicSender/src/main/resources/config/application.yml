@@ -9,7 +9,7 @@ spring:
           brokers: localhost:9092
 
       bindings:
-        greetings-out:
+        output:
           destination: greetings
           contentType: application/json
           
