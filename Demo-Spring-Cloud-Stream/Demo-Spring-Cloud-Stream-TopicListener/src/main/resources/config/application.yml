@@ -1,6 +1,6 @@
 spring:
-  profiles:
-    active: listener2
+  application:
+    name: Topic Listener
 
   cloud:
     stream:
@@ -12,22 +12,6 @@ spring:
         input:
           destination: processing
           contentType: application/json
----
-spring:
-  application:
-    name: Topic Listener
-  
-  profiles: listener1
-  
-server:
-  port: 8000
-  
----
-spring:
-  application:
-    name: Topic Listener
-  
-  profiles: listener2
-  
+
 server:
   port: 8001

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: Topic Sender
+    name: Topic Sender1
 
   cloud:
     stream:

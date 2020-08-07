@@ -1,6 +1,6 @@
 spring:
   application:
-    name: Topic Aggregator
+    name: Topic Stream Aggregator
 
   cloud:
     stream:
