@@ -20,6 +20,18 @@
 	</properties>
 	
 	<dependencies>
-		
+		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>demo-spring-cloud-stream-common</artifactId>
+		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>

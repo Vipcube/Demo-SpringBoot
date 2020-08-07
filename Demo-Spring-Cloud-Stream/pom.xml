@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.5.RELEASE</version>
+		<version>2.3.0.RELEASE</version>
 		<relativePath />
 	</parent>
 
@@ -21,7 +21,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<guava.version>27.1-jre</guava.version>
-		<spring-cloud.version>Hoxton.SR4</spring-cloud.version>
+		<spring-cloud.version>Hoxton.SR7</spring-cloud.version>
 	</properties>
 	
 	<dependencyManagement>
@@ -32,6 +32,11 @@
 				<version>${spring-cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.example</groupId>
+				<artifactId>demo-spring-cloud-stream-common</artifactId>
+				<version>${project.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -66,18 +71,11 @@
 		</dependency>
 	</dependencies>
 	
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-	
 	<modules>
 		<module>Demo-Spring-Cloud-Stream-TopicSender</module>
 		<module>Demo-Spring-Cloud-Stream-TopicListener</module>
-		<module>Demo-Spring-Cloud-Stream-Aggregator</module>
+		<module>Demo-Spring-Cloud-Stream-StreamAggregator</module>
+		<module>Demo-Spring-Cloud-Stream-Common</module>
+		<module>Demo-Spring-Cloud-Stream-TopicSender2</module>
 	</modules>
 </project>

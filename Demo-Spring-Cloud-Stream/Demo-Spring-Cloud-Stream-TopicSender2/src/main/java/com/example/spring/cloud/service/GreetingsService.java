@@ -22,7 +22,7 @@ public class GreetingsService {
 	}
 
 	public void sendGreeting( Greetings greetings ) {
-		log.info("Greeting1: Sending greetings {}", greetings );
+		log.info("Greeting2: Sending greetings {}", greetings );
 		source.output().send(
 				MessageBuilder
 					.withPayload( greetings )

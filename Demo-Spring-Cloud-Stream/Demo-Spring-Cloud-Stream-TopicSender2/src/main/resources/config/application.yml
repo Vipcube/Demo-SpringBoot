@@ -1,6 +1,6 @@
 spring:
   application:
-    name: Topic Sender
+    name: Topic Sender2
 
   cloud:
     stream:
@@ -10,8 +10,8 @@ spring:
 
       bindings:
         output:
-          destination: greetings1
+          destination: greetings2
           contentType: application/json
           
 server:
-  port: 8003
+  port: 8004
