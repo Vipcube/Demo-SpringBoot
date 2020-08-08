@@ -72,10 +72,10 @@
 	</dependencies>
 	
 	<modules>
-		<module>Demo-Spring-Cloud-Stream-TopicSender</module>
-		<module>Demo-Spring-Cloud-Stream-TopicListener</module>
-		<module>Demo-Spring-Cloud-Stream-StreamAggregator</module>
 		<module>Demo-Spring-Cloud-Stream-Common</module>
+		<module>Demo-Spring-Cloud-Stream-TopicSender</module>
 		<module>Demo-Spring-Cloud-Stream-TopicSender2</module>
+		<module>Demo-Spring-Cloud-Stream-TopicListener</module>
+		<module>Demo-Spring-Cloud-Stream-StreamProcessor</module>
 	</modules>
 </project>

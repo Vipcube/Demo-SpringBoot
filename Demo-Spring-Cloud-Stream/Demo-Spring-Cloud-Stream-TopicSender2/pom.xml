@@ -10,6 +10,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>demo-spring-cloud-stream-topicsender2</artifactId>
+	<name>Demo-Spring-Cloud-Stream-TopicSender2</name>
 
 	<dependencies>
 		<dependency>
