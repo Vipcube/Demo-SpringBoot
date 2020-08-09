@@ -79,5 +79,6 @@
 		<module>Demo-Spring-Cloud-Stream-TopicListener2</module>
 		<module>Demo-Spring-Cloud-Stream-StreamProcessor</module>
 		<module>Demo-Spring-Cloud-Stream-StreamConsumer</module>
+		<module>Demo-Spring-Cloud-Stream-StreamConsumer-TwoInput</module>
 	</modules>
 </project>

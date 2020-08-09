@@ -19,7 +19,7 @@ public class GreetingsConsumerStreamConfig {
 	 * The binding the consumer pattern with functional style. <br/>
 	 * Binding topic will be same as method name, it's will be add '-in-0' to input.
 	 *
-	 * @return lambda function of processor
+	 * @return lambda function of consumer
 	 */
 	@Bean
 	public Consumer<KStream<?, Greetings>> process() {
