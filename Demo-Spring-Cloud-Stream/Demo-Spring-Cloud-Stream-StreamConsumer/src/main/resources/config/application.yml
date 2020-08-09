@@ -9,9 +9,16 @@ spring:
           brokers: localhost:9092
 
       bindings:
-        input:
+        process-in-0:
           destination: greetings1
           contentType: application/json
 
 server:
   port: 8006
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud: DEBUG
+        integration: DEBUG

@@ -9,10 +9,19 @@ spring:
           brokers: localhost:9092
 
       bindings:
-        input:
+        # Service method
+        #input:
+        #  destination: greetings1
+        #  contentType: application/json
+        #output:
+        #  destination: processing
+        #  contentType: application/json
+
+        # Bean method
+        process-in-0:
           destination: greetings1
           contentType: application/json
-        output:
+        process-out-0:
           destination: processing
           contentType: application/json
 
