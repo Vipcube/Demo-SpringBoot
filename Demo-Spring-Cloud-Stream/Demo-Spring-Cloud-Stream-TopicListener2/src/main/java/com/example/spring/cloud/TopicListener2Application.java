@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TopicSenderApplication {
+public class TopicListener2Application {
 	public static void main( String[] args ) {
-		SpringApplication.run( TopicSenderApplication.class, args);
+		SpringApplication.run( TopicListener2Application.class, args);
 	}
 }

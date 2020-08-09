@@ -1,6 +1,6 @@
 spring:
   application:
-    name: Topic Listener
+    name: Topic Listener1
 
   cloud:
     stream:

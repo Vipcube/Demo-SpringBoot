@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AggregatorStreamApplication {
+public class StreamProcessorApplication {
 	public static void main( String[] args ){
-		SpringApplication.run( AggregatorStreamApplication.class, args);
+		SpringApplication.run( StreamProcessorApplication.class, args);
 	}
 }

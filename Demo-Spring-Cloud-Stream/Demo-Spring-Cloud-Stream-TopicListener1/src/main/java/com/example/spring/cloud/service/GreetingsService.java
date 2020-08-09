@@ -15,6 +15,6 @@ public class GreetingsService {
 
 	@StreamListener( Sink.INPUT )
 	public void greetingListener( @Payload Greetings greetings ) {
-		log.info("Received greetings: {}", greetings );
+		log.info("TopicListener: Received greetings: {}", greetings );
 	}
 }
