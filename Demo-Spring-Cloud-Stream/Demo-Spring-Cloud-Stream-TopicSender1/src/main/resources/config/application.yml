@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: Topic Sender1
+
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+      bindings:
+        output:
+          destination: greetings1
+          contentType: application/json
+          
+server:
+  port: 8003

@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: Topic Stream Consumer
+
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+      bindings:
+        process-in-0:
+          destination: greetings1
+          contentType: application/json
+
+server:
+  port: 8006
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud: DEBUG
+        integration: DEBUG

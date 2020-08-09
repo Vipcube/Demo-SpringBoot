@@ -7,6 +7,8 @@ server:
 
 security:
   oauth2:
+    sso:
+      login-path: /callback
     client:
       clientId: webclient
       clientSecret: webclient12345678

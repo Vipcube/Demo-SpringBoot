@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: Topic Stream Processor
+
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+      bindings:
+        # Service method
+        #input:
+        #  destination: greetings1
+        #  contentType: application/json
+        #output:
+        #  destination: processing
+        #  contentType: application/json
+
+        # Bean method
+        process-in-0:
+          destination: greetings1
+          contentType: application/json
+        process-out-0:
+          destination: processing
+          contentType: application/json
+
+server:
+  port: 8002

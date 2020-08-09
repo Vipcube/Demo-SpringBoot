@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: Topic Listener1
+
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+      bindings:
+        input:
+          destination: processing
+          contentType: application/json
+
+server:
+  port: 8001
