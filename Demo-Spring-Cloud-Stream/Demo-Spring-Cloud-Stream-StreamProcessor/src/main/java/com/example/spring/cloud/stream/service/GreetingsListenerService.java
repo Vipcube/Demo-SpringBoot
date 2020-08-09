@@ -1,4 +1,4 @@
-package com.example.spring.cloud.aggregator.service;
+package com.example.spring.cloud.stream.service;
 
 import com.example.spring.cloud.bean.Greetings;
 import lombok.extern.slf4j.Slf4j;
