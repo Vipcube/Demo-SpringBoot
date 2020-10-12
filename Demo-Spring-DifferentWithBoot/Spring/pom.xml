@@ -16,6 +16,7 @@
 
 	<properties>
 		<spring.version>5.2.9.RELEASE</spring.version>
+		<tomcat-catalina.version>9.0.2</tomcat-catalina.version>
 	</properties>
 
 	<dependencies>
@@ -28,6 +29,12 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-catalina</artifactId>
+			<version>${tomcat-catalina.version}</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 </project>
