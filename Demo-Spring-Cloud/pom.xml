@@ -94,5 +94,6 @@
 		<module>Demo-Spring-Cloud-Security-OAuth-JWT-Server</module>
 		<module>Demo-Spring-Cloud-Security-OAuth-JWT-Resource</module>
 		<module>Demo-Spring-Cloud-Eureka-Producer-Contract</module>
+		<module>Demo-Spring-Cloud-Eureka-Consumer-Contract</module>
 	</modules>
 </project>
