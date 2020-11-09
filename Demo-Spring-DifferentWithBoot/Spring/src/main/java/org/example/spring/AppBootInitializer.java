@@ -6,12 +6,17 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
+/**
+ * The app initializer.
+ *
+ * @author Brad Chen
+ *
+ */
 public class AppBootInitializer implements WebApplicationInitializer {
 	@Override
-	public void onStartup( ServletContext servletContext ) throws ServletException {
+	public void onStartup( ServletContext servletContext ) {
 		AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
 		ac.register( RootConfig.class );
 		ac.refresh();
