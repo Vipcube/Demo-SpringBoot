@@ -18,6 +18,7 @@ public class AppBootInitializer implements WebApplicationInitializer {
 	@Override
 	public void onStartup( ServletContext servletContext ) {
 		AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
+		ac.setServletContext( servletContext );
 		ac.register( RootConfig.class );
 		ac.refresh();
 
