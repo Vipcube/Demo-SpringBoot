@@ -93,7 +93,10 @@
 		<module>Demo-Spring-Cloud-Admin</module>
 		<module>Demo-Spring-Cloud-Security-OAuth-JWT-Server</module>
 		<module>Demo-Spring-Cloud-Security-OAuth-JWT-Resource</module>
-		<module>Demo-Spring-Cloud-Eureka-Producer-Contract</module>
-		<module>Demo-Spring-Cloud-Eureka-Consumer-Contract</module>
+		<module>Demo-Spring-Cloud-Contract-Producer</module>
+		<module>Demo-Spring-Cloud-Contract-Consumer</module>
+		<module>Demo-Spring-Cloud-Sleuth-Consumer</module>
+		<module>Demo-Spring-Cloud-Sleuth-Producer1</module>
+		<module>Demo-Spring-Cloud-Sleuth-Producer2</module>
 	</modules>
 </project>

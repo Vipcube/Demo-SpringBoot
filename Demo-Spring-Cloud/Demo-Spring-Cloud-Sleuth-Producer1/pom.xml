@@ -9,15 +9,19 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>demo-spring-cloud-eureka-producer-contract</artifactId>
+	<artifactId>demo-spring-cloud-sleuth-producer2</artifactId>
 	<packaging>jar</packaging>
 
-	<name>The eureka client service producer with contract</name>
+	<name>The demo of Sleuth with service producer 2</name>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
 		</dependency>
 		<!-- Spring Boot -->
 		<dependency>
@@ -28,27 +32,5 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-contract-verifier</artifactId>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-contract-maven-plugin</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<baseClassForTests>com.example.spring.cloud.eureka.producer.contract.BaseContractTest</baseClassForTests>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
 </project>
