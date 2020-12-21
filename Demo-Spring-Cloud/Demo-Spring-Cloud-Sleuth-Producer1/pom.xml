@@ -9,10 +9,10 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>demo-spring-cloud-sleuth-producer2</artifactId>
+	<artifactId>demo-spring-cloud-sleuth-producer1</artifactId>
 	<packaging>jar</packaging>
 
-	<name>The demo of Sleuth with service producer 2</name>
+	<name>The demo of Sleuth with service producer 1</name>
 
 	<dependencies>
 		<dependency>
