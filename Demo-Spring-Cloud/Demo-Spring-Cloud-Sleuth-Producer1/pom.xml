@@ -9,24 +9,23 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>demo-spring-cloud-eureka-consumer-contract</artifactId>
+	<artifactId>demo-spring-cloud-sleuth-producer1</artifactId>
 	<packaging>jar</packaging>
 
-	<name>The eureka client service consumer and test with contract</name>
+	<name>The demo of Sleuth with service producer 1</name>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-contract-stub-runner</artifactId>
-			<scope>test</scope>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
 		<!-- Spring Boot -->
 		<dependency>
@@ -38,13 +37,4 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 </project>
