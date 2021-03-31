@@ -20,7 +20,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<guava.version>27.1-jre</guava.version>
+		<guava.version>29.0-jre</guava.version>
 		<spring-cloud.version>Hoxton.SR7</spring-cloud.version>
 	</properties>
 	
