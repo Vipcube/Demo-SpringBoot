@@ -33,7 +33,7 @@ public class BatchJobConfiguration {
 	public FlatFileItemReader<Bike> reader() {
 		return new FlatFileItemReaderBuilder<Bike>()
 				.name("bikeReader")
-				.resource(new ClassPathResource("csv/AvocadoBike.csv"))
+				.resource(new ClassPathResource("csv/Bike.csv"))
 				.delimited()
 				.names(new String[]{"brand","assetNo"})
 				.fieldSetMapper( new BeanWrapperFieldSetMapper<>() {{
