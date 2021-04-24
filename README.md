@@ -12,5 +12,6 @@ The demo projects let me know more about the it's how to work.
 | Demo-Spring-ScheduleTasks | The demo of how to use the spring schedule task. |
 | Demo-Spring-Security-OAuth | The demo of simple spring security oauth. |
 | Demo-Spring-Swagger | The demo of simple spring swagger and security. |
+| Demo-Spring-Batch | The demo of how to use spring batch. |
 | Demo-Spring-Cloud | The demo of simple spring cloud family. |
 | Demo-Spring-Cloud-Stream | The demo of simple spring cloud stream with kafka. |
