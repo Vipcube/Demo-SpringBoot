@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+    <contextName>logback</contextName>
+    <property name="LOGS" value="./logs" />
+    <appender name="JSON" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="com.example.springboot.fluentd.DataJsonLayout">
+            <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter" />
+            <timestampFormat>yyyy-MM-dd' 'HH:mm:ss.SSS</timestampFormat>
+            <appendLineSeparator>true</appendLineSeparator>
+        </layout>
+    </appender>
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+	                %black(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %yellow(%C{1.}): %msg%n%throwable
+            </Pattern>
+        </layout>
+    </appender>
+
+
+    <appender name="FLUENCY" class="ch.qos.logback.more.appenders.FluencyLogbackAppender">
+        <tag>test</tag>
+        <!-- Host name/address and port number which Flentd placed -->
+        <remoteHost>localhost</remoteHost>
+        <port>20001</port>
+        <!-- [Optional] Configurations to customize Fluency's behavior: https://github.com/komamitsu/fluency#usage  -->
+        <ackResponseMode>false</ackResponseMode>
+        <fileBackupDir>/tmp</fileBackupDir>
+        <!-- Initial chunk buffer size is 1MB (by default)-->
+        <bufferChunkInitialSize>2097152</bufferChunkInitialSize>
+        <!--Threshold chunk buffer size to flush is 4MB (by default)-->
+        <bufferChunkRetentionSize>16777216</bufferChunkRetentionSize>
+        <!-- Max total buffer size is 512MB (by default)-->
+        <maxBufferSize>268435456</maxBufferSize>
+        <!-- Max wait until all buffers are flushed is 10 seconds (by default)-->
+        <waitUntilBufferFlushed>30</waitUntilBufferFlushed>
+        <!-- Max wait until the flusher is terminated is 10 seconds (by default) -->
+        <waitUntilFlusherTerminated>40</waitUntilFlusherTerminated>
+        <!-- Max retry of sending events is 8 (by default) -->
+        <senderMaxRetryCount>12</senderMaxRetryCount>
+        <!-- [Optional] Enable/Disable use of EventTime to get sub second resolution of log event date-time -->
+        <useEventTime>true</useEventTime>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="Console" />
+    </root>
+    <logger name="efk-logger">
+        <appender-ref ref="FLUENCY" />
+    </logger>
+
+
+
+</configuration>
