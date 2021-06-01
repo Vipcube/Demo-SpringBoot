@@ -9,7 +9,7 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>Demo-Spring-Cloud-Stream-BindngConsumer</artifactId>
+	<artifactId>Demo-Spring-Cloud-Stream-BindingConsumer</artifactId>
 
 	<name>Spring Cloud Stream Old Pattern Consumer</name>
 
