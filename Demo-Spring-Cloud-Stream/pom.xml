@@ -75,5 +75,8 @@
 		<module>Demo-Spring-Cloud-Stream-FunctionalConsumer</module>
 		<module>Demo-Spring-Cloud-Stream-FunctionalSourcer</module>
 		<module>Demo-Spring-Cloud-Stream-FunctionalProcessor</module>
+		<module>Demo-Spring-Cloud-Stream-BindngSourcer</module>
+		<module>Demo-Spring-Cloud-Stream-BindngProcessor</module>
+		<module>Demo-Spring-Cloud-Stream-BindngConsumer</module>
 	</modules>
 </project>

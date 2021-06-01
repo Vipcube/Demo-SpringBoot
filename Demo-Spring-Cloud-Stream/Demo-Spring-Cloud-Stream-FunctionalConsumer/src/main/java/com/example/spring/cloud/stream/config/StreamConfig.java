@@ -12,6 +12,6 @@ import java.util.function.Consumer;
 public class StreamConfig {
 	@Bean
 	public Consumer<Combine> consumer(){
-		return vo -> log.info( "Receive the message with processor: {}.", vo );
+		return vo -> log.info( "Stream Consumer: Receive the message with processor: {}.", vo );
 	}
 }

@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: Stream Processor
+
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: test-source
+          binder: kafka
+        output:
+          destination: test-out
+          binder: kafka
+
+      binders:
+        kafka:
+          type: kafka
+          environment:
+            spring:
+              cloud:
+                stream:
+                  kafka:
+                    binder:
+                      brokers: localhost:9092
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud: DEBUG
+        integration: DEBUG
+        kafka.config: DEBUG
+
+server:
+  port: 10000
