@@ -75,5 +75,8 @@
 		<module>Demo-Spring-Cloud-Stream-StreamConsumer</module>
 		<module>Demo-Spring-Cloud-Stream-StreamConsumer-TwoInput</module>
 		<module>Demo-Spring-Cloud-Stream-StreamProcessor</module>
+		<module>Demo-Spring-Cloud-Stream-FunctionalConsumer</module>
+		<module>Demo-Spring-Cloud-Stream-FunctionalSourcer</module>
+		<module>Demo-Spring-Cloud-Stream-FunctionalProcessor</module>
 	</modules>
 </project>
