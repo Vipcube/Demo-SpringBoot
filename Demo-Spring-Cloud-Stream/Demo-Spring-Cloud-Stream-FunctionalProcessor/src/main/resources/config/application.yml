@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: Stream Functional Processor
+
+  cloud:
+    stream:
+      bindings:
+        process-in-0:
+          destination: test-source
+          binder: kafka
+        process-out-0:
+          destination: test-out
+          binder: kafka
+
+      function:
+        definition: process
+
+      binders:
+        kafka:
+          type: kafka
+          environment:
+            spring:
+              cloud:
+                stream:
+                  kafka:
+                    binder:
+                      brokers: localhost:9092
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud: DEBUG
+        integration: DEBUG
+        kafka.config: DEBUG
+
+server:
+  port: 10000

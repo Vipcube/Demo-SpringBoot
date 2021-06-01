@@ -2,16 +2,19 @@ version: '3.7'
 
 services:
   zookeeper:
-    image: confluentinc/cp-zookeeper:5.2.4
+    image: confluentinc/cp-zookeeper:5.5.3
     hostname: zookeeper
     ports:
       - 2181:2181
     environment:
       - ZOOKEEPER_SERVER_ID=1
       - ZOOKEEPER_CLIENT_PORT=2181
+      - ZOOKEEPER_MAXCLIENTCNXNS=0
+    networks:
+      - messagequeue
 
   kafka:
-    image: confluentinc/cp-kafka:5.2.4
+    image: confluentinc/cp-kafka:5.5.3
     hostname: kafka
     depends_on:
       - zookeeper
@@ -22,3 +25,10 @@ services:
       - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9092
       - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
       - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+    networks:
+      - messagequeue
+
+networks:
+  messagequeue:
+    name: messagequeue
+    driver: bridge

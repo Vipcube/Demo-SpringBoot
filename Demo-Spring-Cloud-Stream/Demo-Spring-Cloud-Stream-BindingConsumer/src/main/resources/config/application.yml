@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: Stream Consumer
+
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: test-out
+          binder: kafka
+
+      function:
+        definition: consumer
+
+      binders:
+        kafka:
+          type: kafka
+          environment:
+            spring:
+              cloud:
+                stream:
+                  kafka:
+                    binder:
+                      brokers: localhost:9092
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud: DEBUG
+        integration: DEBUG
+        kafka.config: DEBUG
+
+server:
+  port: 9998
