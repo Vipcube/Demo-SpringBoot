@@ -11,6 +11,7 @@ The demo projects let me know more about the it's how to work.
 | Demo-Spring-Admin | The demo of how to use admin server and client with security. |
 | Demo-Spring-ScheduleTasks | The demo of how to use the spring schedule task. |
 | Demo-Spring-Security-OAuth | The demo of simple spring security oauth. |
+| Demo-Spring-Security5-OAuth | The demo of simple spring security 5 version oauth. |
 | Demo-Spring-Swagger | The demo of simple spring swagger and security. |
 | Demo-Spring-Batch | The demo of how to use spring batch. |
 | Demo-Spring-Cloud | The demo of simple spring cloud family. |
