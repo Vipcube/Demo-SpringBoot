@@ -9,14 +9,13 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>authorization-server</artifactId>
+	<artifactId>resource-server</artifactId>
 	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-oauth2-authorization-server</artifactId>
-			<version>0.2.0</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
 		</dependency>
 	</dependencies>
 </project>
