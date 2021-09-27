@@ -66,5 +66,6 @@
 	<modules>
 		<module>AuthServer</module>
 		<module>ResourceServer</module>
+		<module>SSOLogin</module>
 	</modules>
 </project>
