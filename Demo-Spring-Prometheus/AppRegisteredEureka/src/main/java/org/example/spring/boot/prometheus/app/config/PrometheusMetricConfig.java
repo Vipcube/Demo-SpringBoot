@@ -1,18 +1,20 @@
 package org.example.spring.boot.prometheus.app.config;
 
-import io.micrometer.core.instrument.MeterRegistry;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryCustomizer;
+import io.github.mweirauch.micrometer.jvm.extras.ProcessMemoryMetrics;
+import io.github.mweirauch.micrometer.jvm.extras.ProcessThreadMetrics;
+import io.micrometer.core.instrument.binder.MeterBinder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class PrometheusMetricConfig {
-	@Value( "${spring.application.name}" )
-	private String application;
+	@Bean
+	public MeterBinder processMemoryMetrics() {
+		return new ProcessMemoryMetrics();
+	}
 
 	@Bean
-	public MeterRegistryCustomizer<MeterRegistry> metricsCommonTags() {
-		return registry -> registry.config().commonTags("application", this.application );
+	public MeterBinder processThreadMetrics() {
+		return new ProcessThreadMetrics();
 	}
 }
