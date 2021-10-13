@@ -108,5 +108,7 @@
 
 	<modules>
 		<module>Eureka</module>
+		<module>AppStandalone</module>
+		<module>AppRegisteredEureka</module>
 	</modules>
 </project>
