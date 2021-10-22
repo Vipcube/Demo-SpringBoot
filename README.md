@@ -16,3 +16,4 @@ The demo projects let me know more about the it's how to work.
 | Demo-Spring-Batch | The demo of how to use spring batch. |
 | Demo-Spring-Cloud | The demo of simple spring cloud family. |
 | Demo-Spring-Cloud-Stream | The demo of simple spring cloud stream with kafka. |
+| Demo-Spring-Prometheus | The demo of spring boot how to work with prometheus. |

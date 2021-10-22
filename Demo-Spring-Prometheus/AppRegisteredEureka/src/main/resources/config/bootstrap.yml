@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: springboot-app-registered-eureka
+
+eureka:
+  instance:
+    prefer-ip-address: false
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    metadata-map:
+      metrics.path: /actuator/prometheus
+      health.path: /actuator/health
+      management.context-path: /actuator
+
+  client:
+    security:
+      basic:
+        user: user
+        password: password
+
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVERS:http://${eureka.client.security.basic.user}:${eureka.client.security.basic.password}@eureka:8000/eureka/}
