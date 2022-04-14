@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.spring.boot.mybatis.mapper.UserMapper">
-	<select id="selectById" parameterType="long" resultType="User">
+	<insert id="addUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+		insert into user (name, age) values (#{name}, #{age});
+	</insert>
+
+	<update id="updateUserById" parameterType="User">
+		update user set name=#{name},age=#{age} where id=#{id};
+	</update>
+
+	<delete id="deleteUserById">
+		delete from user where id=#{id};
+	</delete>
+
+	<select id="selectById" resultType="User">
 		select * from user where id = #{id}
 	</select>
 
@@ -17,7 +29,7 @@
 		</collection>
 	</resultMap>
 
-	<select id="selectLeftJoinLogs" parameterType="long" resultMap="leftJoinResultMap">
+	<select id="selectLeftJoinLogs" resultMap="leftJoinResultMap">
 		select
 			u.id as user_id,
 			u.name as user_name,

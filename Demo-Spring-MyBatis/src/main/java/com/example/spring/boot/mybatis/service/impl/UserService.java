@@ -15,6 +15,24 @@ public class UserService implements IUserService {
 	}
 
 	@Override
+	public long addUser( User user ) {
+		this.mapper.addUser( user );
+		return user.getId();
+	}
+
+	@Override
+	public long updateUserById( User user ) {
+		this.mapper.updateUserById( user );
+		return user.getId();
+	}
+
+	@Override
+	public long deleteUserById( long id ) {
+		this.mapper.deleteUserById( id );
+		return id;
+	}
+
+	@Override
 	public User selectById( long id ) {
 		return this.mapper.selectById( id );
 	}

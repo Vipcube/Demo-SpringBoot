@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserMapper {
+	int addUser( User user );
+	int updateUserById( User user );
+	int deleteUserById( long id );
 	User selectById( long id );
 	UserWithLogs selectLeftJoinLogs( long id );
 }
