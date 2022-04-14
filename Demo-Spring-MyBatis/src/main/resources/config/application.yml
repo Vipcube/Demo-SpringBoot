@@ -22,3 +22,5 @@ spring:
 mybatis:
   config-location: classpath:mybatis-config.xml
   mapper-locations: classpath:mappers/*Mapper.xml
+  # If not use config-location, can change to this
+  #type-aliases-package: com.example.spring.boot.mybatis.entity
