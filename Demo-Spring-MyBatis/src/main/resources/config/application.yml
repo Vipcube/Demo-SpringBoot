@@ -6,7 +6,7 @@ spring:
     name: demo-spring-mybatis
 
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test
     username: root
     password: test123456
@@ -17,5 +17,5 @@ spring:
         - classpath:schema.sql
 
 mybatis:
-  config-location: classpath:mybatis/mybatis-config.xml
+  config-location: classpath:mybatis-config.xml
   mapper-locations: classpath:mappers/*Mapper.xml
