@@ -10,3 +10,12 @@ spring:
     url: jdbc:mysql://localhost:3306/test
     username: root
     password: test123456
+
+  sql:
+    init:
+      schema-locations:
+        - classpath:schema.sql
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mappers/*Mapper.xml
