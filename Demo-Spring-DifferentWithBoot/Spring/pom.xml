@@ -15,8 +15,8 @@
 	<name>The demo just use spring framework</name>
 
 	<properties>
-		<spring.version>5.2.9.RELEASE</spring.version>
-		<tomcat-catalina.version>9.0.2</tomcat-catalina.version>
+		<spring.version>5.3.18</spring.version>
+		<tomcat-catalina.version>9.0.62</tomcat-catalina.version>
 	</properties>
 
 	<dependencies>
@@ -41,19 +41,19 @@
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
 			<artifactId>thymeleaf-spring5</artifactId>
-			<version>3.0.11.RELEASE</version>
+			<version>3.0.15.RELEASE</version>
 		</dependency>
 		<!-- JSON -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.11.3</version>
+			<version>2.12.6.1</version>
 		</dependency>
 		<!-- Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.16</version>
+			<version>1.18.22</version>
 		</dependency>
 	</dependencies>
 </project>
