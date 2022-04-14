@@ -4,4 +4,32 @@
 	<select id="selectById" parameterType="long" resultType="User">
 		select * from user where id = #{id}
 	</select>
+
+	<resultMap id="leftJoinResultMap" type="UserWithLogs">
+		<id property="id" column="user_id"/>
+		<result  property="name" column="user_name" jdbcType="VARCHAR"/>
+		<result property="age" column="user_age" jdbcType="INTEGER" />
+		<collection property="logs" ofType="Log">
+			<id property="id" column="log_id"/>
+			<result property="userId" column="log_user_id" jdbcType="INTEGER" />
+			<result property="action" column="log_action" jdbcType="VARCHAR" />
+			<result property="createTime" column="log_create_time" jdbcType="TIMESTAMP" />
+		</collection>
+	</resultMap>
+
+	<select id="selectLeftJoinLogs" parameterType="long" resultMap="leftJoinResultMap">
+		select
+			u.id as user_id,
+			u.name as user_name,
+			u.age as user_age,
+			l.id as log_id,
+			l.user_id as log_user_id,
+			l.action as log_action,
+			l.create_time as log_create_time
+
+		from user as u
+				 left join log as l
+						   on u.id = l.user_id
+		where u.id = #{id}
+	</select>
 </mapper>

@@ -1,6 +1,7 @@
 package com.example.spring.boot.mybatis.service.impl;
 
 import com.example.spring.boot.mybatis.entity.User;
+import com.example.spring.boot.mybatis.entity.UserWithLogs;
 import com.example.spring.boot.mybatis.mapper.UserMapper;
 import com.example.spring.boot.mybatis.service.IUserService;
 import org.springframework.stereotype.Service;
@@ -16,5 +17,10 @@ public class UserService implements IUserService {
 	@Override
 	public User selectById( long id ) {
 		return this.mapper.selectById( id );
+	}
+
+	@Override
+	public UserWithLogs selectLeftJoinLogs( long id ) {
+		return this.mapper.selectLeftJoinLogs( id );
 	}
 }

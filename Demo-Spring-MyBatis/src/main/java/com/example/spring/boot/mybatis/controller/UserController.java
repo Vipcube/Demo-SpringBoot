@@ -21,4 +21,9 @@ public class UserController {
 	public ResponseEntity<?> selectById( @PathVariable long id ){
 		return ResponseEntity.ok( this.service.selectById( id ) );
 	}
+
+	@GetMapping( value = "/left-join-logs/{id}", produces = MediaType.APPLICATION_JSON_VALUE )
+	public ResponseEntity<?> selectLeftJoinLogs( @PathVariable long id ){
+		return ResponseEntity.ok( this.service.selectLeftJoinLogs( id ) );
+	}
 }
