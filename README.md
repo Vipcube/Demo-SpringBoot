@@ -14,6 +14,7 @@ The demo projects let me know more about the it's how to work.
 | Demo-Spring-Security5-OAuth | The demo of simple spring security 5 version oauth. |
 | Demo-Spring-Swagger | The demo of simple spring swagger and security. |
 | Demo-Spring-Batch | The demo of how to use spring batch. |
+| Demo-Apring-MyBatis | The demo of how to use spring and mybatis. |
 | Demo-Spring-Cloud | The demo of simple spring cloud family. |
 | Demo-Spring-Cloud-Stream | The demo of simple spring cloud stream with kafka. |
 | Demo-Spring-Prometheus | The demo of spring boot how to work with prometheus. |
