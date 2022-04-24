@@ -87,7 +87,7 @@
 						<image>adoptopenjdk/openjdk11:jdk-11.0.13_8-alpine-slim</image>
 					</from>
 					<to>
-						<image>${project.groupId}/${project.artifactId}</image>
+						<image>docker.io/vipcube/${project.artifactId}</image>
 						<tags>
 							<tag>${project.version}</tag>
 						</tags>
