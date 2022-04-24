@@ -8,4 +8,4 @@ RUN bash -c 'touch /demo-spring-hello-world-1.0.0-SNAPSHOT.jar'
 EXPOSE 8080
 # When container start, run the command
 ENTRYPOINT ["java", "-jar","/demo-spring-hello-world-1.0.0-SNAPSHOT.jar"]
-MAINTAINER Vipcube
+MAINTAINER vipcube
