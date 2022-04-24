@@ -1,6 +1,6 @@
+server:
+  port: 8080
+
 spring:
   application:
-    name: Docker
-
-max:
-  routes: 15
+    name: demo-spring-hello-world

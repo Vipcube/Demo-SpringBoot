@@ -10,12 +10,12 @@
 		<relativePath />
 	</parent>
 
-	<groupId>com.example</groupId>
-	<artifactId>demo-spring-api</artifactId>
+	<groupId>org.vipcube.spring</groupId>
+	<artifactId>demo-spring-hello-world</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>The Demo of docker with spring-boot</name>
+	<name>The demo of docker with spring-boot hello world</name>
 
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
@@ -28,6 +28,10 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
