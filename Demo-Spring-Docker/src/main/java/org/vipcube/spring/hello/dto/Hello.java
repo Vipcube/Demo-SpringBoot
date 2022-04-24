@@ -1,4 +1,4 @@
-package com.example.demo.spring.docker.dto;
+package org.vipcube.spring.hello.dto;
 
 import lombok.Builder;
 import lombok.Data;

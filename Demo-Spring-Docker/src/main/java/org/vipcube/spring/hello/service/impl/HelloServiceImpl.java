@@ -1,7 +1,7 @@
-package com.example.demo.spring.docker.service.impl;
+package org.vipcube.spring.hello.service.impl;
 
-import com.example.demo.spring.docker.dto.Hello;
-import com.example.demo.spring.docker.service.IHelloService;
+import org.vipcube.spring.hello.dto.Hello;
+import org.vipcube.spring.hello.service.IHelloService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

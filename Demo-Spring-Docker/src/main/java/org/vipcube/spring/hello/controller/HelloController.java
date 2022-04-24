@@ -1,6 +1,6 @@
-package com.example.demo.spring.docker.controller;
+package org.vipcube.spring.hello.controller;
 
-import com.example.demo.spring.docker.service.IHelloService;
+import org.vipcube.spring.hello.service.IHelloService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
