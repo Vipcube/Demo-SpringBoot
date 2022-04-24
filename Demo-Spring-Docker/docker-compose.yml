@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  hello-world-api:
+    image: vipcube/demo-spring-hello-world:1.0.0-SNAPSHOT
+    hostname: hello-world-api
+    ports:
+      - "8080:8080"
