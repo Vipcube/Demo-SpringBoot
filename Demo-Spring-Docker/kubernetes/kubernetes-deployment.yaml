@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-api
+  labels:
+    app: hello-world-api
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: hello-world-api
+      labels:
+        app: hello-world-api
+    spec:
+      containers:
+        - name: hello-world-api
+          image: vipcube/demo-spring-hello-world
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: hello-world-api
