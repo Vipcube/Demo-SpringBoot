@@ -43,10 +43,6 @@ metadata:
   namespace: backend
   labels:
     app: springboot-app-prometheus-sa
-  annotations:
-    prometheus.io/scrape: "true"
-    prometheus.io/path: /actuator/prometheus
-    prometheus.io/port: "8081"
 spec:
   replicas: 1
   strategy: {}
@@ -54,6 +50,10 @@ spec:
     metadata:
       labels:
         app: springboot-app-prometheus-sa
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /actuator/prometheus
+        prometheus.io/port: "8081"
     spec:
       containers:
         - name: springboot-app-prometheus-sa
