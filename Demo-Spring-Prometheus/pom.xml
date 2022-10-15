@@ -19,6 +19,8 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<ci.commit.tag>0</ci.commit.tag>
+		<app.name>${project.artifactId}</app.name>
 	</properties>
 
 	<dependencyManagement>
@@ -94,6 +96,11 @@
 				</executions>
 				<configuration>
 					<container>
+						<appRoot>/opt</appRoot>
+						<environment>
+							<APP_HOME>/opt</APP_HOME>
+							<SPRING_APPLICATION_NAME>${app.name}</SPRING_APPLICATION_NAME>
+						</environment>
 						<creationTime>USE_CURRENT_TIMESTAMP</creationTime>
 						<user>nobody:nogroup</user>
 					</container>
@@ -104,6 +111,7 @@
 						<image>${project.groupId}/${project.artifactId}</image>
 						<tags>
 							<tag>${project.version}</tag>
+							<tag>${ci.commit.tag}</tag>
 						</tags>
 					</to>
 				</configuration>
