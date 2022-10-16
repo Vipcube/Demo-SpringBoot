@@ -6,7 +6,7 @@ spring:
     name: spring-boot-trace-otel
 
   zipkin:
-    enabled: false
+    enabled: ${ZIPKIN_ENABLED:false}
     compression:
       enabled: true
-    base-url: http://localhost:9411/
+    base-url: ${ZIPKIN_URL:http://localhost:9411/}
