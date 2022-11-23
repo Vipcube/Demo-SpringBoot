@@ -142,6 +142,7 @@
 
     <modules>
         <module>batch</module>
+        <module>schedule-tasks</module>
         <module>springdoc-swagger</module>
         <module>trace-otel</module>
     </modules>
