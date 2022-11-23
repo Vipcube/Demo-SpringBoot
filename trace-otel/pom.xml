@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>demo-springboot-trace-otel</artifactId>
-    <packaging>ajr</packaging>
+    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
