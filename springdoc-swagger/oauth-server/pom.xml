@@ -4,27 +4,24 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
 		<artifactId>demo-spring-swagger</artifactId>
-		<groupId>org.example</groupId>
+		<groupId>org.vipcube.spring</groupId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>demo-spring-swagger-openapi</artifactId>
+	<artifactId>demo-spring-swagger-oauth-server</artifactId>
 	<packaging>jar</packaging>
 
-	<name>The Demo of Spring boot with Swagger use open-api</name>
-	<url>http://www.example.com</url>
-
-	<properties>
-		<spring.openapi.version>1.2.31</spring.openapi.version>
-	</properties>
+	<name>The OAuth Server use for swagger test</name>
 
 	<dependencies>
-		<!-- Spring OpenAPI -->
 		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>${spring.openapi.version}</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security.oauth.boot</groupId>
+			<artifactId>spring-security-oauth2-autoconfigure</artifactId>
 		</dependency>
 	</dependencies>
 </project>
