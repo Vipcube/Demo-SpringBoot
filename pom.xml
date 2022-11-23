@@ -18,6 +18,13 @@
 
     <name>The Parent of demo Spring Boot</name>
 
+    <developers>
+        <developer>
+            <name>Brad Chen</name>
+            <email>vipcube@gmail.com</email>
+        </developer>
+    </developers>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -75,6 +82,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -142,6 +154,7 @@
 
     <modules>
         <module>batch</module>
+        <module>database</module>
         <module>schedule-tasks</module>
         <module>springdoc-swagger</module>
         <module>trace-otel</module>
