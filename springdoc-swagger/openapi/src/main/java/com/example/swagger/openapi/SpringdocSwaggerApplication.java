@@ -7,11 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * The main program.
  *
  * @author Brad Chen
- *
  */
 @SpringBootApplication
-public class SpringSwaggerOpenAPI_APP {
-	public static void main( String[] args ) {
-		SpringApplication.run( SpringSwaggerOpenAPI_APP.class, args );
-	}
+public class SpringdocSwaggerApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(SpringdocSwaggerApplication.class, args);
+    }
 }

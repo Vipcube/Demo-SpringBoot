@@ -37,7 +37,6 @@
 	</build>
 
 	<modules>
-		<module>oauth-server</module>
 		<module>openapi</module>
 		<module>openapi-oauth</module>
 	</modules>
