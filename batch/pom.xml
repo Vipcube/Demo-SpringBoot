@@ -13,6 +13,8 @@
 	<artifactId>demo-spring-batch</artifactId>
 	<packaging>jar</packaging>
 
+	<name>The Demo of Spring Boot with Batch</name>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

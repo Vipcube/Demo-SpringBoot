@@ -13,6 +13,8 @@
     <artifactId>demo-springboot-trace-otel</artifactId>
     <packaging>jar</packaging>
 
+    <name>The Demo of Spring Boot with OpenTrace</name>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
