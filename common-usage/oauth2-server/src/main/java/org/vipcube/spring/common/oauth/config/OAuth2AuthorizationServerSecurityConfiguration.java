@@ -63,6 +63,8 @@ public class OAuth2AuthorizationServerSecurityConfiguration {
             throws Exception {
         http
                 .authorizeHttpRequests((authorize) -> authorize
+                        .antMatchers("/actuator/**", "/swagger-ui/**", "/swagger-ui.html", "/v3/**")
+                        .permitAll()
                         .anyRequest().authenticated()
                 )
                 // Form login handles the redirect to the login page from the
