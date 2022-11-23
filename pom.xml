@@ -113,5 +113,6 @@
 
     <modules>
         <module>batch</module>
+        <module>trace-otel</module>
     </modules>
 </project>
