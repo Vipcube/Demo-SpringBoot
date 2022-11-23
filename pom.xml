@@ -162,6 +162,7 @@
         <module>common-usage</module>
         <module>database</module>
         <module>schedule-tasks</module>
+        <module>security5-oauth</module>
         <module>springdoc-swagger</module>
         <module>trace-otel</module>
     </modules>

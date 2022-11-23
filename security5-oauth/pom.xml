@@ -3,20 +3,18 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
 		<groupId>org.vipcube.spring</groupId>
 		<artifactId>demo-springboot-parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>demo-springdoc-swagger-parent</artifactId>
+	<artifactId>demo-springboot-security5-oauth-parent</artifactId>
 	<packaging>pom</packaging>
 
-	<name>The Springdoc Swagger Parent of Demo Spring Boot</name>
+	<name>The Security OAuth 2.0 Parent of Demo Spring Boot</name>
 
 	<dependencies>
-		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -37,7 +35,7 @@
 	</build>
 
 	<modules>
-		<module>openapi</module>
-		<module>openapi-oauth</module>
+		<module>resource-server</module>
+		<module>sso-login</module>
 	</modules>
 </project>

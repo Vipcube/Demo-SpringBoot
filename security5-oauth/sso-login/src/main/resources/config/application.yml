@@ -1,0 +1,49 @@
+server:
+  port: 10001
+
+logging:
+  level:
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
+
+spring:
+  thymeleaf:
+    cache: false
+  security:
+    oauth2:
+      client:
+        registration:
+#          login-client-keycloak:
+#            provider: keycloak
+#            authorization-grant-type: authorization_code
+#            client-name: test-client-keycloak
+#            client-id: test-client
+#            client-secret: 7f3f768f-4bc1-4468-9abe-c0bdfb2cedca
+#            client-authentication-method: client_secret_basic
+#            scope: openid,profile
+#            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+
+          login-client-spring:
+            provider: spring
+            authorization-grant-type: authorization_code
+            client-name: login-client-spring
+            client-id: login-client
+            client-secret: openid-connect
+            client-authentication-method: client_secret_basic
+            scope: openid,profile
+            redirect-uri: '{baseUrl}/authorized'
+
+        provider:
+          spring:
+            authorization-uri: http://localhost:9001/oauth2/authorize
+            token-uri: http://localhost:9001/oauth2/token
+            jwk-set-uri: http://localhost:9001/oauth2/jwks
+
+#          keycloak:
+#            issuer-uri: http://localhost:8080/auth/realms/oauth
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
