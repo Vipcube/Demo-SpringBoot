@@ -112,6 +112,6 @@
     </build>
 
     <modules>
-        <module>spring-batch</module>
+        <module>batch</module>
     </modules>
 </project>
