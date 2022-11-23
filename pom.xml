@@ -74,6 +74,11 @@
                 <artifactId>springdoc-openapi-webmvc-core</artifactId>
                 <version>${swagger.springdoc.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-security</artifactId>
+                <version>${swagger.springdoc.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
