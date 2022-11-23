@@ -159,6 +159,7 @@
 
     <modules>
         <module>batch</module>
+        <module>common-usage</module>
         <module>database</module>
         <module>schedule-tasks</module>
         <module>springdoc-swagger</module>
