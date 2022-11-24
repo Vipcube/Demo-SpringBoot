@@ -82,7 +82,7 @@ public class OAuth2AuthorizationServerSecurityConfiguration {
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
-                .redirectUri("http://127.0.0.1:10001/login/oauth2/code/login-client")
+                .redirectUri("http://127.0.0.1:10001/login/oauth2/code/login-client-spring")
                 .redirectUri("http://127.0.0.1:10001/authorized")
                 .scope(OidcScopes.OPENID)
                 .scope(OidcScopes.PROFILE)
