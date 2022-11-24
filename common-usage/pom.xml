@@ -47,5 +47,6 @@
 
     <modules>
         <module>oauth2-server</module>
+        <module>eureka</module>
     </modules>
 </project>

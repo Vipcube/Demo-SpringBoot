@@ -1,0 +1,30 @@
+server:
+  port: 8000
+  shutdown: graceful
+
+spring:
+  application:
+    name: eureka-server
+
+  # eureka authenticating
+  security:
+    user:
+      name: user
+      password: password
+
+eureka:
+  environment: ${EUREKA_ENVIRONMENT:${spring.profiles.active}}
+  instance:
+    appname: ${spring.application.name}
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    prefer-ip-address: false
+    metadata-map:
+      # pass client authenticating to admin server by eureka
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@localhost:8000/eureka/
