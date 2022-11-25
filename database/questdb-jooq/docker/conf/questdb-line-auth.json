@@ -1,0 +1,13 @@
+{
+  "alg": "ES256",
+  "crv": "P-256",
+  "d": "i9uJJpcmewGtrqGOA-zD3ZLwhSOEXvQrxRYq50pkb4I",
+  "key_ops": [
+    "sign",
+    "verify"
+  ],
+  "kid": "test-user",
+  "kty": "EC",
+  "x": "7sV9vahzEazz51BI08LxzSyIdd_TACGa-pd-6lC02QI",
+  "y": "HWM-kaUptdMl3yQ52U5TqZeOynGxrZ6LVolNZk-2C_I"
+}

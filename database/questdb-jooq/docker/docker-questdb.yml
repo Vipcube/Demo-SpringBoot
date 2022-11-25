@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  questdb:
+    image: questdb/questdb:6.5.4
+    hostname: questdb/questdb
+    ports:
+      - "9000:9000" # REST API and Web Console
+      - "9003:9003" # Min health server
+      - "9009:9009" # InfluxDB line protocol
+      - "8812:8812" # Postgres wire protocol
+#    environment:
+#      QDB_HTTP_BIND_TO: 0.0.0.0:4000
+#      QDB_LINE_TCP_AUTH_DB_PATH: /line-auth.conf
+    volumes:
+      - ./conf/questdb-server.conf:/var/lib/questdb/conf/server.conf
+      - ./conf/questdb-line-auth.conf:/var/lib/questdb/conf/line-auth.conf
+#      - ./:/var/lib/questdb
