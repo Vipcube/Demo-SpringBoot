@@ -15,6 +15,7 @@ import org.vipcube.spring.database.questdb.util.QuestdbHelper;
 
 import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.Objects;
 
 import static org.vipcube.spring.database.questdb.entity.GpsRecord.GPS_RECORD;
 
@@ -35,11 +36,16 @@ public class GpsRecordRepositoryImpl implements GpsRecordRepository {
 
     @Override
     public GpsRecord insert(GpsRecord entity) {
-        try (Sender sender = Sender.builder().address(address).enableAuth(user).authToken(token).build()) {
+        var builder = Sender.builder().address(address);
+        if (Objects.nonNull(user)) {
+            builder = builder.enableAuth(user).authToken(token);
+        }
+        try (Sender sender = builder.build()) {
             sender.symbol(GPS_RECORD.DEVICE.getName(), entity.getDevice())
                     .doubleColumn(GPS_RECORD.LAT.getName(), entity.getLat())
                     .doubleColumn(GPS_RECORD.LON.getName(), entity.getLon())
                     .at(QuestdbHelper.toInfluxTime(entity.getTimestamp()));
+            sender.flush();
         }
         return entity;
     }
