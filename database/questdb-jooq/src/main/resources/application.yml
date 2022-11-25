@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: questdb-jooq
+
+  datasource:
+    url: jdbc:postgresql://localhost:8812/qdb
+    username: admin
+    password: quest
+    driver-class-name: org.postgresql.Driver
+
+logging:
+  level:
+    logging.level.org.jooq.tools.LoggerListener: DEBUG
+    org.springframework.jdbc.core.JdbcTemplate: DEBUG
+
+questdb:
+  address: localhost:9009
+  user: test-user
+  token: i9uJJpcmewGtrqGOA-zD3ZLwhSOEXvQrxRYq50pkb4I

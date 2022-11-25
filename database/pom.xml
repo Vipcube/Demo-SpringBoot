@@ -16,6 +16,8 @@
     <name>The Database Parent of Demo Spring Boot</name>
 
     <properties>
+        <postgresql.version>42.4.2</postgresql.version>
+        <jooq.version>3.17.4</jooq.version>
         <mybatis-starter.version>2.2.2</mybatis-starter.version>
     </properties>
 
@@ -26,10 +28,22 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-starter.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.jooq</groupId>
+                <artifactId>jooq</artifactId>
+                <version>${jooq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.version}</version>
+                <scope>runtime</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <modules>
         <module>mybatis-sample</module>
+        <module>questdb-jooq</module>
     </modules>
 </project>
