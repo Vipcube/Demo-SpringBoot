@@ -15,7 +15,7 @@
 	<name>The demo just use spring framework</name>
 
 	<properties>
-		<spring.version>5.3.18</spring.version>
+		<spring.version>6.0.0</spring.version>
 		<tomcat-catalina.version>9.0.62</tomcat-catalina.version>
 	</properties>
 
